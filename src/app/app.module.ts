@@ -11,6 +11,9 @@ import { ForumComponent } from './forum/forum.component';
 import { VezbanjeComponent } from './vezbanje/vezbanje.component';
 import { ResursiComponent } from './resursi/resursi.component';
 import { ONamaComponent } from './o-nama/o-nama.component';
+import { LoginComponent } from './login/login.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
+import { BlogPostPageComponent } from './blog-post-page/blog-post-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { ONamaComponent } from './o-nama/o-nama.component';
     ForumComponent,
     VezbanjeComponent,
     ResursiComponent,
-    ONamaComponent
+    ONamaComponent,
+    LoginComponent,
+    BlogPostComponent,
+    BlogPostPageComponent
   ],
   imports: [
     BrowserModule,
