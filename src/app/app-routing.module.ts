@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
@@ -8,9 +8,11 @@ import { ResursiComponent } from './resursi/resursi.component';
 import { ONamaComponent } from './o-nama/o-nama.component';
 import { LoginComponent } from './login/login.component';
 import { WebsiteComponent } from './website/website.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
   {
     path: '',
     component: WebsiteComponent,

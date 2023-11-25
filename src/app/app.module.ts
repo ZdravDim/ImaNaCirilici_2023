@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogPostPageComponent } from './blog-post-page/blog-post-page.component';
 import { WebsiteComponent } from './website/website.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { WebsiteComponent } from './website/website.component';
     LoginComponent,
     BlogPostComponent,
     BlogPostPageComponent,
-    WebsiteComponent
+    WebsiteComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
