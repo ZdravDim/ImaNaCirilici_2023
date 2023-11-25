@@ -6,6 +6,10 @@ a.navbar-brand {
     font-size: xx-large;
 }
 
+h1 {
+    font-size: 50px;
+}
+
 .navbar-nav a {
     font-weight: 1000 !important;
     font-size: large;

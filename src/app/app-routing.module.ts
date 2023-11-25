@@ -6,6 +6,7 @@ import { ForumComponent } from './forum/forum.component';
 import { VezbanjeComponent } from './vezbanje/vezbanje.component';
 import { ResursiComponent } from './resursi/resursi.component';
 import { ONamaComponent } from './o-nama/o-nama.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'forum', component: ForumComponent},
   {path: 'vezbanje', component: VezbanjeComponent},
   {path: 'resursi', component: ResursiComponent},
-  {path: 'o nama', component: ONamaComponent}
+  {path: 'o nama', component: ONamaComponent},
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
