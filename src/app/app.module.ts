@@ -14,6 +14,7 @@ import { ONamaComponent } from './o-nama/o-nama.component';
 import { LoginComponent } from './login/login.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogPostPageComponent } from './blog-post-page/blog-post-page.component';
+import { WebsiteComponent } from './website/website.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BlogPostPageComponent } from './blog-post-page/blog-post-page.component
     ONamaComponent,
     LoginComponent,
     BlogPostComponent,
-    BlogPostPageComponent
+    BlogPostPageComponent,
+    WebsiteComponent
   ],
   imports: [
     BrowserModule,
