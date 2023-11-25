@@ -5,12 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { BlogComponent } from './blog/blog.component';
+import { ForumComponent } from './forum/forum.component';
+import { VezbanjeComponent } from './vezbanje/vezbanje.component';
+import { ResursiComponent } from './resursi/resursi.component';
+import { ONamaComponent } from './o-nama/o-nama.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    BlogComponent,
+    ForumComponent,
+    VezbanjeComponent,
+    ResursiComponent,
+    ONamaComponent
   ],
   imports: [
     BrowserModule,
