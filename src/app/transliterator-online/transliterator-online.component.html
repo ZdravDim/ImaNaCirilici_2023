@@ -1,18 +1,15 @@
-<app-header></app-header>
-<div class="wrapper">
-<input type="text" id="inputText" placeholder="Унеси текст...">
-<input type="text" id="outputText" readonly placeholder="Превод...">
-
-<br>
-
-<select id="transliterationType">
-    <option value="latin">У латиницу</option>
-    <option value="cyrillic">У ћирилицу</option>
-</select>
-
-<br>
-
-<button onclick="prevedi()">ПРЕВЕДИ</button>
+<div class="container p-5">
+    <form>
+        <div class="row">
+            <input class="col-lg mr-2 ml-auto" type="text" id="inputText" placeholder="Унеси текст...">
+            <input class="col-lg ml-2 mr-auto" type="text" id="outputText" readonly placeholder="Превод...">
+        </div>
+        <div class="text-center same-size mx-auto">
+            <select class="mt-3 mr-3 p-2" id="transliterationType">
+                <option value="latin">У латиницу</option>
+                <option value="cyrillic">У ћирилицу</option>
+            </select>
+            <button class="same-size mt-2 btn" onclick="prevedi()">ПРЕВЕДИ</button>
+        </div>
+    </form>
 </div>
-
-<app-footer></app-footer>
