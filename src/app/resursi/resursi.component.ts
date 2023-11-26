@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./resursi.component.css']
 })
 export class ResursiComponent {
-  downloadZip(): void {
-    const filePath = "serbian-language-tools-master.zip";
+  downloadZip(filePath: string): void {
+    //const filePath = "serbian-language-tools-master.zip";
     const url = `http://localhost:8080/api/zip/downloadZip/${filePath}`;
 
 

@@ -6,6 +6,7 @@ export interface LoginRequest {
 export interface LoginResponse {
     jwt: string;
     refreshToken: string;
+    admin: boolean;
 }
 
 export interface RegisterRequest {
