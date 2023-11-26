@@ -3,6 +3,10 @@
     to {filter: grayscale(70%); scale: 1.03;}
 }
 
+.row-inner {
+  width: 100%;
+}
+
 h1 {
     margin-top: 50px;
     margin-bottom: 50px;
