@@ -1,11 +1,28 @@
-.resursi-wrapper {
-    display: flex;
+h1 {
+    margin-bottom: 20px;
+    text-decoration: underline;
 }
 
-.tz-transliterator,
-.plugini,
-.fontovi,
-.ostalo {
-    flex: 1;
-    margin: 10px;
+@media only screen and (max-width: 767px) {
+    h1 {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    
+
+    .row div {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+
+    .container-fluid {
+        padding: 0px 100px;
+    }
+}
+
+h3:hover {
+    cursor: pointer;
+    color: grey;
 }
