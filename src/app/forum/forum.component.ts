@@ -13,6 +13,7 @@ export class ForumComponent {
   obrisiBtn: HTMLElement | null = null;
   postujBtn: HTMLElement | null = null;
   forumArray: any;
+  
   constructor(private apiService: HttpServiceService, private activeRoute: ActivatedRoute, private router: Router) {
     apiService.get('forum/posts').subscribe({
       next: (data) => {

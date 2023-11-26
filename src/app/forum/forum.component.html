@@ -29,13 +29,15 @@
    
     <div id="Comments" class="hidden">
       <div *ngFor='let comment of forumData["comments"]' class="comment">
-        <div class="commentContent">
-          <h2>{{comment['createdBy']}}</h2>
-          <p>{{comment['content']}}</p>
-        </div>
         <div class="commentDate">
+          <h2>{{comment['createdBy']}}</h2>
           <h3>{{comment['createdAt']}}</h3>
         </div>
+        <div class="commentContent">
+
+          <p>{{comment['content']}}</p>
+        </div>
+
       </div>
     </div>
     <button id="showComments" (click)="showComments()">Прикажи коментаре</button>

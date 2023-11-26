@@ -8,7 +8,7 @@ import { HttpServiceService } from '../http-service.service';
 })
 export class DodajBlogComponent {
   sucessfulResponse: boolean = false;
-
+  selectedFile: any;
   constructor(private apiService: HttpServiceService) {}
 
   ngAfterViewInit() {
@@ -21,10 +21,14 @@ export class DodajBlogComponent {
     });
   }
 
+  onFileSelected(event: any) {
+    this.selectedFile = <File>event.target.files[0];
+  }
+
   createBlog(data: any) {
     let formData = new FormData();
     console.log(data)
-    formData.append('image', data.image);
+    formData.append('image', this.selectedFile, this.selectedFile.name);
     formData.append('title', data.title);
     formData.append('content', data.textarea);
 

@@ -15,7 +15,7 @@
 
             <div class="form-group mb-3">
                 <label for="image" class="sr-only">Слика</label>
-                <input type="file" name="image" id="imagefile" class="form-control" placeholder="Слика" ngModel required>
+                <input (change)="onFileSelected($event)"  type="file" name="image" id="imagefile" class="form-control" placeholder="Слика" ngModel required>
             </div>
 
             <div class="d-flex justify-content-between align-items-center mb-3">
