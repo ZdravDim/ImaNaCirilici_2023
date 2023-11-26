@@ -6,6 +6,15 @@ form {
     max-width: 600px;
 }
 
+.comment-div {
+    max-width: 568px;
+    border-radius: 4px !important;
+}
+
+textarea, button {
+    border-radius: 0px;
+}
+
 button {
     background-color: #313131 !important;
 }
@@ -17,3 +26,86 @@ button:hover {
 button:active {
     background-color: #0e0e0e !important;
 }
+
+
+
+
+
+
+.div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 3fr 52px;
+    height: 300px;
+    width: 550px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: #E5E4E2 3px 3px 0 5px;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+    
+  a {
+    text-decoration: none;
+  }
+  
+  .div h1 {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    all: unset;
+    color: #28282B;
+    font-size: 1.75rem;
+  }
+  
+  .div p {
+    all: unset;
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+    margin: 10px auto;
+    font-family: Calibri;
+    font-size: 1.25rem;
+    color: grey;
+  }
+  
+  .div .autor {
+    all: unset;
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+    width: fit-content;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: subgrid;
+  }
+  
+  .autor img {
+    aspect-ratio: 1/1;
+    height: 100%;
+    max-width: 100%;
+    grid-column: 1/span 1;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 1px solid #E5E4E2;
+  }
+  .autor p {
+    grid-column: 2 / span 1;
+    text-align: right;
+  }
+  
+  @media (max-width: 700px) {
+    .div {
+      width: 85%;
+      height: fit-content;
+      object-fit: contain;
+      grid-template-columns: 1fr;
+    }
+  
+    .div h1 {
+      grid-column: 1 / span 2;
+    }
+  
+    .div .autor {
+      grid-column: 1 / span 2;
+    }
+  }
