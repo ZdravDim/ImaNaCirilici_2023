@@ -56,7 +56,7 @@ export class VezbanjeRacerComponent {
         this.pokreni();
       },
       error: (err) => {
-        alert(err);
+        alert(err.message);
       }
     });
   }

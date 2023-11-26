@@ -10,7 +10,7 @@ export class BlogComponent {
   blogArray: any;
 
   constructor(private apiService: HttpServiceService) {
-    apiService.get('').subscribe({
+    apiService.get('/blog/posts').subscribe({
       next: (data) => {
         this.blogArray = data;
       }

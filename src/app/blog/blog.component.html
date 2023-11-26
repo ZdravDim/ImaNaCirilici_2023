@@ -1,3 +1,10 @@
-<a *ngFor='let blog of blogArray' routerLink="/blog/{blog['id']}">
-    <app-blog-post></app-blog-post>
+<a *ngFor='let blogData of blogArray' routerLink="/blog/{blog['id']}">
+    <div>
+        <h1>{{blogData['title']}}</h1>
+        <p> {{blogData['content']}}</p>
+        <div class="autor">
+        <img src="/assets/1.jpg">
+        <p>{{blogData['createdBy']}}</p>
+        </div>
+    </div>
 </a>
