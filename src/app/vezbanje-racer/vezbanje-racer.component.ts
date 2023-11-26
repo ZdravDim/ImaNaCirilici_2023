@@ -9,6 +9,9 @@ export class VezbanjeRacerComponent {
   public characterSet = new Set(["љ", "њ", "е", "р", "т", "з", "у", "и", "о", "п", "ш", "ђ", "а", "с", "д", "ф",
     "г", "х", "ј", "к", "л", "ч", "ћ", "ж", "џ", "ц", "в", "б", "н", "м", "Љ", "Њ", "Е", "Р", "Т", "З", "У", "И", "О", "П", "Ш", "Ђ", "А", "С", "Д", "Ф",
     "Г", "Х", "Ј", "К", "Л", "Ч", "Ћ", "Ж", "Џ", "Ц", "В", "Б", "Н", "М", " ", ".", ",", "!", ";", ":"]);
+
+  public characterMap = new Map(); //TODO Finish map
+  konvertuj_u_latinicu() {} //TODO Finish converter
   pokreni():void {
     let text: string = "Ја се зовем Лука";
     let textLen: number = text.length;

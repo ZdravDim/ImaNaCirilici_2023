@@ -1,8 +1,31 @@
 #TextPrompt {
   position: relative;
-  width: 300px;
-  height: 200px;
+  width: 600px;
+  height: auto;
+  min-height: 200px;
+  margin: 30px auto;
+  background-color: white;
+  text-align: center;
+  font-family: calibri;
+  font-size: 1.25rem;
   color: black;
+  border-radius: 10px;
+  box-shadow: #E5E4E2 3px 3px 0 5px;
+}
+
+#TextUser {
+  position: relative;
+  width: 600px;
+  height: auto;
+  min-height: 200px;
+  margin: 30px auto;
+  background-color: white;
+  text-align: center;
+  font-family: calibri;
+  font-size: 1.25rem;
+  color: black;
+  border-radius: 10px;
+  box-shadow: #E5E4E2 -3px 3px 0 5px;
 }
 
 p>span {
