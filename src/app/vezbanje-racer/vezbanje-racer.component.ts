@@ -7,6 +7,8 @@ import { HttpServiceService } from '../http-service.service';
   styleUrls: ['./vezbanje-racer.component.css']
 })
 export class VezbanjeRacerComponent {
+  apiText: string = '';
+
   constructor(private apiService: HttpServiceService) {}
 
   public characterSet = new Set(["љ", "њ", "е", "р", "т", "з", "у", "и", "о", "п", "ш", "ђ", "а", "с", "д", "ф",
@@ -44,24 +46,31 @@ export class VezbanjeRacerComponent {
   }
 
   ngOnInit() {
-    this.pokreni();
+    this.getText();
   }
 
-  pokreni(): void {
+  getText() {
+    this.apiService.get('vezba/nasumicni').subscribe({
+      next: (data) => {
+        this.apiText = data['tekst'];
+        this.pokreni();
+      },
+      error: (err) => {
+        alert(err.message);
+      }
+    });
+  }
+
+  pokreni() {
     const resetButton = document.getElementById("rstBtn");
 
     if (resetButton) {
       resetButton.style.visibility = "hidden";
     }
 
-    //POZVATI GET NA /vezba/nasumicni i to staviti u textCir
+    let textLen: number = this.apiText.length;
 
-    let textCir: string = "Ја се зовем Лука";
-
-
-    let textLen: number = textCir.length;
-
-    const text = this.konvertuj_u_latinicu(textCir);
+    const text = this.konvertuj_u_latinicu(this.apiText);
 
     let textPrompt: HTMLElement | null = document.getElementById("TextPrompt");
     let textUser: HTMLElement | null = document.getElementById("TextUser");
@@ -86,7 +95,7 @@ export class VezbanjeRacerComponent {
         }
 
         if (this.characterSet.has(event.key) && i != textLen) {
-          if (event.key === textCir.charAt(i) && textUser != null) {
+          if (event.key === this.apiText.charAt(i) && textUser != null) {
             textUser.innerHTML += event.key;
           } else if (textUser != null) {
             textUser.innerHTML += "<span style='color:red'>" + event.key + "</span>";
@@ -109,7 +118,7 @@ export class VezbanjeRacerComponent {
     }
   }
 
-  restartuj(): void {
+  restartuj() {
     window.location.reload();
   }
 }
