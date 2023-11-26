@@ -18,7 +18,6 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { HtmlParser } from '@angular/compiler';
 import { VezbanjeRacerComponent } from './vezbanje-racer/vezbanje-racer.component';
 import { ApiDocumentationComponent } from './api-documentation/api-documentation.component';
 import { PrevodilacComponent } from './prevodilac/prevodilac.component';

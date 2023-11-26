@@ -1,0 +1,5 @@
+<p>Dodaj novi tekst za vezbu</p>
+<form #text = "ngForm" (submit)="dodajTekst(text.value)">
+    <input type="text" name="text" />
+    <button type="submit" id="addVezba">Dodaj</button>
+</form>
