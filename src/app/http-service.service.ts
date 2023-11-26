@@ -20,10 +20,18 @@ export class HttpServiceService {
   }
 
   get(path: string) : Observable<any> {
-    return this.httpClient.get<any>(this.url + path);
+    return this.httpClient.get<any>(this.url + path, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
   }
 
   post(path: string, data: any) : Observable<any> {
-    return this.httpClient.post<any>(this.url + path, data);
+    return this.httpClient.post<any>(this.url + path, data, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
   }
 }

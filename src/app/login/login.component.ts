@@ -37,6 +37,7 @@ export class LoginComponent {
       next: (responseData) => {
         localStorage.setItem('accessToken', responseData.jwt);
         localStorage.setItem('refreshToken', responseData.refreshToken);
+        localStorage.setItem('admin', responseData.admin.toString());
         this.router.navigate(['/']);
       },
       error: (err) => {
