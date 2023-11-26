@@ -2,12 +2,8 @@
     background-color:rgb(224, 224, 224) !important;
 }
 
-a.navbar-brand {
-    font-size: xx-large;
-}
-
 h1 {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .navbar-nav a {
@@ -23,8 +19,30 @@ h1 {
     padding-left: 15px !important;
 }
 
+.navbar-toggler {
+    height: 50px !important;
+}
+
+#ul .right-tab {
+    background-color: #313131 !important;
+}
+
+#ul .right-tab:hover {
+    background-color: #252525 !important;
+}
+
+#ul .right-tab:active {
+    background-color: #0e0e0e !important;
+}
+
 @media (min-width: 992px) {
+    h1 {
+        font-size: 50px;
+    }
+
     .navbar-expand-lg .navbar-nav .nav-link {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
         padding-left: 20px !important;
         padding-right: 20px !important;
         margin-left: 0 !important;

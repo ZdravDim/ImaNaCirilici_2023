@@ -1,13 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white d-flex flex-column">
     <div class="col header-upper mx-auto d-flex">
-        <h1 class="navbar-brand mx-auto" href="#">Има на ћирилици</h1>
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="mx-auto d-flex align-middle custom-size mb-2">
+          <app-logo class="pr-3 d-flex align-middle custom-size"></app-logo>
+          <h1 class="navbar-brand mb-0 my-auto">Има на ћирилици</h1>
+        </div>
+        <button class="navbar-toggler ml-auto my-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
-  
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto">
+      <ul id="ul" class="navbar-nav mx-auto">
         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
           <a class="nav-link" ariaCurrentWhenActive="page" [routerLink]="['/']">Почетна <span class="sr-only">(current)</span></a>
         </li>
@@ -25,6 +28,12 @@
           </li>
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
             <a class="nav-link" ariaCurrentWhenActive="page" [routerLink]="['/o nama']">О нама</a>
+          </li>
+          <li *ngIf="logInButtonVisible" class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link text-white right-tab" ariaCurrentWhenActive="page" [routerLink]="['/login']">Улогуј се</a>
+          </li>
+          <li *ngIf="!logInButtonVisible" class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a (click)="izlogujSe()" class="nav-link text-white right-tab" ariaCurrentWhenActive="page" [routerLink]="['/']">Излогуј се</a>
           </li>
       </ul>
     </div>

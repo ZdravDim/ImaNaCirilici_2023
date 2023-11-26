@@ -9,6 +9,7 @@ import { ONamaComponent } from './o-nama/o-nama.component';
 import { LoginComponent } from './login/login.component';
 import { WebsiteComponent } from './website/website.component';
 import { RegisterComponent } from './register/register.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
     children: [
       {path: '', component: HomeComponent},
       {path: 'blog', component: BlogComponent},
+      {path: 'blog/:blogId', component: BlogPostComponent},
       {path: 'forum', component: ForumComponent},
       {path: 'vezbanje', component: VezbanjeComponent},
       {path: 'resursi', component: ResursiComponent},

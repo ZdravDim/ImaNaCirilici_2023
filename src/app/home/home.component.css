@@ -1,0 +1,31 @@
+
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+}
+
+.container-fluid {
+  max-width: min(90%, 800px);
+  margin: 2% auto;
+  padding: 20px;
+  text-align: justify;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #333;
+  text-align: center;
+}
+
+h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: center;
+}

@@ -1,1 +1,3 @@
-<app-blog-post></app-blog-post>
+<a *ngFor='let blog of blogArray' routerLink="/blog/{blog['id']}">
+    <app-blog-post></app-blog-post>
+</a>
