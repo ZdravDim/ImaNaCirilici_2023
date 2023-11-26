@@ -23,11 +23,11 @@
 
   <div *ngFor="let comment of blogData['comments']" class="mt-2 mb-4 mx-auto comment-div">
     <div class="div mx-auto">
-      <h1 class="mr-auto">{{blogData['createdBy']['firstName'] + ' ' + blogData['createdBy']['lastName']}}</h1>
-      <p>{{blogData['content']}}</p>
+      <h1 class="mr-auto">{{comment['createdBy'] }}</h1>
+      <p>{{comment['content']}}</p>
       <div class="autor">
         <img src="assets/1.jpg">
-        <p>{{blogData['createdBy']['firstName'] + ' ' + blogData['createdBy']['lastName']}}</p>
+        <p>{{comment['createdBy']}}</p>
       </div>
     </div>
   </div>

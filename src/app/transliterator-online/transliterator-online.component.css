@@ -1,21 +1,37 @@
-body {
-    text-align: center;
-    margin: 20px;
-}
-
-input, select, button {
-    margin: 5px;
-    padding: 8px;
-    font-size: 16px;
-}
-
 input[type=text] {
     height: 100px;
-    width: 40%;
 }
 
-.wrapper {
-    position: relative;
-    width: 50%;
-    margin: 20px auto;
+input {
+    max-width: 400px;
+}
+
+.same-size {
+    width: 118px;
+}
+
+button, select {
+    background-color: #313131 !important;
+    color: white !important;
+    border-radius: 0px;
+}
+
+button:hover {
+    background-color: #252525 !important;
+}
+
+button:active {
+    background-color: #0e0e0e !important;
+}
+
+@media only screen and (max-width: 991px) {
+    input[type=text] {
+        margin-top: 20px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .container {
+        padding-top: 10px !important;
+    }
 }

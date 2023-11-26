@@ -15,7 +15,7 @@ export class LoginComponent {
   }
 
   constructor(private router: Router, private apiService: HttpServiceService) {}
-  
+
   ngAfterViewInit() {
     document.getElementById("myForm")?.addEventListener("submit", function(e) {
       if ((document.getElementById('myForm') as HTMLFormElement).checkValidity() === false) {
@@ -24,6 +24,12 @@ export class LoginComponent {
       }
       document.getElementById("myForm")?.classList.add("was-validated");
     });
+  }
+
+  ngOnInit(){
+    if(localStorage.getItem('accessToken') != null){
+      this.router.navigate(['/']);
+    }
   }
 
   loginFunction(data: any) {
@@ -37,6 +43,7 @@ export class LoginComponent {
       next: (responseData) => {
         localStorage.setItem('accessToken', responseData.jwt);
         localStorage.setItem('refreshToken', responseData.refreshToken);
+        localStorage.setItem('admin', responseData.admin.toString());
         this.router.navigate(['/']);
       },
       error: (err) => {

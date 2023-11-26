@@ -18,11 +18,10 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { HtmlParser } from '@angular/compiler';
 import { VezbanjeRacerComponent } from './vezbanje-racer/vezbanje-racer.component';
 import { ApiDocumentationComponent } from './api-documentation/api-documentation.component';
-import { PrevodilacComponent } from './prevodilac/prevodilac.component';
 import { TransliteratorOnlineComponent } from './transliterator-online/transliterator-online.component';
+import { ForumNewPostComponent } from './forum-new-post/forum-new-post.component';
 
 @NgModule({
   declarations: [
@@ -42,8 +41,8 @@ import { TransliteratorOnlineComponent } from './transliterator-online/translite
     LogoComponent,
     VezbanjeRacerComponent,
     ApiDocumentationComponent,
-    PrevodilacComponent,
-    TransliteratorOnlineComponent
+    TransliteratorOnlineComponent,
+    ForumNewPostComponent
   ],
   imports: [
     BrowserModule,

@@ -16,9 +16,6 @@ import {TransliteratorOnlineComponent} from "./transliterator-online/translitera
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'api-documentation', component: ApiDocumentationComponent},
-  {path: 'transliterator-online', component: TransliteratorOnlineComponent},
-
   {
     path: '',
     component: WebsiteComponent,
@@ -30,7 +27,8 @@ const routes: Routes = [
       {path: 'vezbanje', component: VezbanjeComponent},
       {path: 'resursi', component: ResursiComponent},
       {path: 'o nama', component: ONamaComponent},
-      {path: 'login', component: LoginComponent}
+      {path: 'api-documentation', component: ApiDocumentationComponent},
+      {path: 'transliterator-online', component: TransliteratorOnlineComponent},
     ]
   },
   {path: '**', redirectTo: '', pathMatch: 'full'}
