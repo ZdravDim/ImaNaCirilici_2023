@@ -2,4 +2,18 @@
   <h1 class="text-center my-3">{{blogData['title']}}</h1>
   slika...
   <p>{{blogData['content']}}</p>
+
+  <div class="mt-4">
+    <h3>Оставите коментар</h3>
+
+    <form id="myForm" #userComment = "ngForm" (submit)="sendComment(userComment.value)" class="needs-validation mx-auto p-3" novalidate>
+        <div class="form-group mb-0">
+            <textarea  style="position: relative; " (click)="formVisible = true" name="comment" class="form-control" rows="3" placeholder="Унесите коментар..." ngModel required></textarea>
+        </div>
+
+        <div *ngIf="formVisible" class="p-3">
+            <button class="btn w-100 text-white" type="submit">Пошаљи</button>
+        </div>
+    </form>
+</div>
 </div>
