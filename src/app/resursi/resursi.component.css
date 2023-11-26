@@ -1,0 +1,11 @@
+.resursi-wrapper {
+    display: flex;
+}
+
+.tz-transliterator,
+.plugini,
+.fontovi,
+.ostalo {
+    flex: 1;
+    margin: 10px;
+}
