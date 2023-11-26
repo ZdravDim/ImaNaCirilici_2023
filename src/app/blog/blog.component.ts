@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpServiceService } from '../http-service.service';
 
 @Component({
   selector: 'app-blog',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent {
+  blogArray: any;
 
+  constructor(private apiService: HttpServiceService) {
+    apiService.get('/').subscribe({
+      next: (data) => {
+        this.blogArray = data;
+      }
+    });
+  }
 }
