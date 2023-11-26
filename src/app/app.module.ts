@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HtmlParser } from '@angular/compiler';
+import { VezbanjeRacerComponent } from './vezbanje-racer/vezbanje-racer.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HtmlParser } from '@angular/compiler';
     BlogPostPageComponent,
     WebsiteComponent,
     RegisterComponent,
-    LogoComponent
+    LogoComponent,
+    VezbanjeRacerComponent
   ],
   imports: [
     BrowserModule,
