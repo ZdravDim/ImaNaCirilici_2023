@@ -15,6 +15,6 @@ export class HttpServiceService {
   }
 
   loginRequest(data: LoginRequest) : Observable<LoginResponse> {
-    return this.httpClient.post<LoginResponse>(this.url + 'auth/login', data);
+    return this.httpClient.post<LoginResponse>(this.url + 'login', data);
   }
 }
