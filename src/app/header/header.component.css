@@ -23,6 +23,18 @@ h1 {
     height: 50px !important;
 }
 
+#right-tab {
+    background-color: #313131 !important;
+}
+
+#right-tab:hover {
+    background-color: #252525 !important;
+}
+
+#right-tab:active {
+    background-color: #0e0e0e !important;
+}
+
 @media (min-width: 992px) {
     h1 {
         font-size: 50px;
