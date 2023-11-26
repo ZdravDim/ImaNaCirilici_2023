@@ -22,6 +22,11 @@ export class VezbanjeRacerComponent {
   }
 
   pokreni(): void {
+    const resetButton = document.getElementById("rstBtn");
+
+    if (resetButton) {
+      resetButton.style.visibility = "hidden";
+    }
     let text: string = "Ја се зовем Лука";
     let textLen: number = text.length;
     let textPrompt: HTMLElement | null = document.getElementById("TextPrompt");
@@ -31,7 +36,7 @@ export class VezbanjeRacerComponent {
     let i: number = 0;
     let numberOfErrors = 0;
     let startTime: number | null = null;
-    let timerInterval: any = null; // Dodato polje za interval
+    let timerInterval: any = null;
 
     if (textPrompt != null) textPrompt.innerHTML = text;
     if (textUser != null && timerDisplay != null) {
@@ -60,7 +65,6 @@ export class VezbanjeRacerComponent {
             if(brojGresaka != null){
               brojGresaka.innerHTML += 'Imate:' + numberOfErrors + ' gresaka od ' + i + ' karaktera.';
             }
-            const resetButton = document.getElementById("rstBtn");
 
             if (resetButton) {
               resetButton.style.visibility = "visible";
@@ -72,10 +76,6 @@ export class VezbanjeRacerComponent {
   }
 
   restartuj(): void {
-    const resetButton = document.getElementById("rstBtn");
-
-    if (resetButton) {
-      resetButton.style.visibility = "hidden";
-    }
+    window.location.reload();
   }
 }
