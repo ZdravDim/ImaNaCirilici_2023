@@ -50,20 +50,71 @@
   width: 100%;
 }
 
-input[type=text]{
+
+.sendComment {
+  height: fit-content;
+  display: inline-flex;
+  flex-flow: row nowrap;
+}
+
+.sendComment>input[type=text]{
   all: unset;
+  flex-grow: 1;
+  flex-basis: fit-content;
+  height: 100%;
   margin: 10px 0 0;
-  border: 1px solid black;
   border-radius: 5px;
+  font-size: 1.1rem;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+}
+
+.sendComment>input[type=text]::placeholder {
+  color: #9A9A9A;
+}
+
+.sendComment>button {
+  all: unset;
+  position: relative;
+  margin: 10px 0 0;
+  max-width: 40px;
+  flex-grow: 1;
+  background-color: #E5E8E8;
+  border-radius: 5px;
+  transition: 200ms;
+}
+
+.sendComment>button:hover {
+  background-color: #D5D8D8;
+  transition: 200ms;
+}
+
+.sendComment>button>img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+  height: 70%;
+  aspect-ratio: 1/1;
+}
+
+#showComments {
+  all: unset;
   width: 100%;
+  margin: 10px auto 10px;
+  padding: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #4E545C;
+  border-radius: 5px;
+  color: white;
+  transition: 200ms;
 }
 
-input[type=text]::placeholder {
-  color: #8D9797;
-}
-
-.comments {
-
+#showComments:hover {
+  background-color: #2E343C;
+  transition: 200ms;
 }
 
 @media (max-width: 760px) {
