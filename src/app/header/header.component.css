@@ -41,6 +41,8 @@ h1 {
     }
 
     .navbar-expand-lg .navbar-nav .nav-link {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
         padding-left: 20px !important;
         padding-right: 20px !important;
         margin-left: 0 !important;
