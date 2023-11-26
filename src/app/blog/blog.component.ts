@@ -8,8 +8,11 @@ import { HttpServiceService } from '../http-service.service';
 })
 export class BlogComponent {
   blogArray: any;
+  userIsAdmin: boolean = false;
 
   constructor(private apiService: HttpServiceService) {
+    this.userIsAdmin = localStorage.getItem('isAdmin') === 'true';
+
     apiService.get('blog/posts').subscribe({
       next: (data) => {
         this.blogArray = data['content'];

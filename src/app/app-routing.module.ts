@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import {ApiDocumentationComponent} from "./api-documentation/api-documentation.component";
 import {TransliteratorOnlineComponent} from "./transliterator-online/transliterator-online.component";
+import { DodajBlogComponent } from './dodaj-blog/dodaj-blog.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
     children: [
       {path: '', component: HomeComponent},
       {path: 'blog', component: BlogComponent},
+      {path: 'blog/dodaj', component: DodajBlogComponent},
       {path: 'blog/:blogId', component: BlogPostComponent},
       {path: 'forum', component: ForumComponent},
       {path: 'vezbanje', component: VezbanjeComponent},

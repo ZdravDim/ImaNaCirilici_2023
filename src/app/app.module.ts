@@ -22,6 +22,7 @@ import { VezbanjeRacerComponent } from './vezbanje-racer/vezbanje-racer.componen
 import { ApiDocumentationComponent } from './api-documentation/api-documentation.component';
 import { TransliteratorOnlineComponent } from './transliterator-online/transliterator-online.component';
 import { ForumNewPostComponent } from './forum-new-post/forum-new-post.component';
+import { DodajBlogComponent } from './dodaj-blog/dodaj-blog.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ForumNewPostComponent } from './forum-new-post/forum-new-post.component
     VezbanjeRacerComponent,
     ApiDocumentationComponent,
     TransliteratorOnlineComponent,
-    ForumNewPostComponent
+    ForumNewPostComponent,
+    DodajBlogComponent
   ],
   imports: [
     BrowserModule,
