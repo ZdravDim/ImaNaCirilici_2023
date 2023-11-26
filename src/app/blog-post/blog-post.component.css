@@ -27,10 +27,9 @@ button:active {
     background-color: #0e0e0e !important;
 }
 
-
-
-
-
+img {
+    max-width: 93%;
+}
 
 .div {
     display: grid;

@@ -1,7 +1,10 @@
 <div class="container-fluid text-center">
-  <h1 class="text-center my-3">{{blogData['title']}}</h1>
-  slika...
-  <p>{{blogData['content']}}</p>
+  <h1 class="text-center my-4">{{blogData['title']}}</h1>
+  <picture>
+    <source srcset="assets/blog.webp" />
+    <img class="mt-1" src="assets/blog.jpg" alt="Blog image" />
+  </picture>
+  <p class="mt-4">{{blogData['content']}}</p>
 
   <div class="mt-4">
     <h3>Оставите коментар</h3>
