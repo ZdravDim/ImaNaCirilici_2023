@@ -8,7 +8,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
-  
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul id="ul" class="navbar-nav mx-auto">
         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
@@ -33,7 +33,7 @@
             <a class="nav-link text-white right-tab" ariaCurrentWhenActive="page" [routerLink]="['/login']">Улогуј се</a>
           </li>
           <li *ngIf="!logInButtonVisible" class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-            <a class="nav-link text-white right-tab" ariaCurrentWhenActive="page" [routerLink]="['/']">Излогуј се</a>
+            <a (click)="izlogujSe()" class="nav-link text-white right-tab" ariaCurrentWhenActive="page" [routerLink]="['/']">Излогуј се</a>
           </li>
       </ul>
     </div>
