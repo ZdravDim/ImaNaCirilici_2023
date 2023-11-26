@@ -60,6 +60,7 @@ div.autor {
 @media (max-width: 700px) {
   div {
     width: 85%;
+    grid-template-columns: 1fr;
   }
 
   h1 {
