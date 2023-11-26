@@ -17,19 +17,20 @@ export class LoginComponent {
   constructor(private router: Router, private apiService: HttpServiceService) {}
   
   loginFunction(data: any) {
+
     this.loginData = {
       username: data.username,
       password: data.password
     }
 
     this.apiService.loginRequest(data).subscribe({
-      error: (err) => {
-        alert(err.message);
-      },
       next: (responseData) => {
         localStorage.setItem('accessToken', responseData.jwt);
         localStorage.setItem('refreshToken', responseData.refreshToken);
         this.router.navigate(['/']);
+      },
+      error: (err) => {
+        alert(err.message);
       }
     });
   }
