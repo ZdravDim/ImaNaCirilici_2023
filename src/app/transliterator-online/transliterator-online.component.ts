@@ -8,35 +8,34 @@ import { HttpServiceService } from '../http-service.service';
 })
 export class TransliteratorOnlineComponent {
 
-  outputElement: HTMLSelectElement;
-
   constructor(private apiService: HttpServiceService) {
-    this.outputElement = document.getElementById('transliterationType') as HTMLSelectElement;
+    
   }
 
   translate(data: any) {
+    let outputElement = document.getElementById('outputText') as HTMLSelectElement;
     let selectElement = document.getElementById('transliterationType') as HTMLSelectElement;
     let selectedIndex = selectElement.selectedIndex;
 
     if (selectedIndex) {
-      this.apiService.post('transliteration/to-cyrillic', data.text).subscribe({
+      this.apiService.post('transliteration/to-cyrillic', {text: data.text}).subscribe({
         next: (data) => {
           let returnValue = '';
           data['data'].forEach((element: string[]) => {
             returnValue += element[0] + ' ';
           });
-          this.outputElement.innerHTML = returnValue.slice(0, -1);
+          outputElement.value = returnValue.slice(0, -1);
         }
       });
     }
     else {
-      this.apiService.post('transliteration/to-latin', data.text).subscribe({
+      this.apiService.post('transliteration/to-latin', {text: data.text}).subscribe({
         next: (data) => {
           let returnValue = '';
           data['data'].forEach((element: string[]) => {
             returnValue += element[0] + ' ';
           });
-          this.outputElement.innerHTML = returnValue.slice(0, -1);
+          outputElement.value = returnValue.slice(0, -1);
         }
       });
     }
