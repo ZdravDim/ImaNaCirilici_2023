@@ -16,6 +16,16 @@ export class LoginComponent {
 
   constructor(private router: Router, private apiService: HttpServiceService) {}
   
+  ngAfterViewInit() {
+    document.getElementById("myForm")?.addEventListener("submit", function(e) {
+      if ((document.getElementById('myForm') as HTMLFormElement).checkValidity() === false) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      document.getElementById("myForm")?.classList.add("was-validated");
+    });
+  }
+
   loginFunction(data: any) {
 
     this.loginData = {
