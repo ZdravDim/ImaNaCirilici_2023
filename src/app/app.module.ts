@@ -16,6 +16,8 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogPostPageComponent } from './blog-post-page/blog-post-page.component';
 import { WebsiteComponent } from './website/website.component';
 import { RegisterComponent } from './register/register.component';
+import { FormsModule } from '@angular/forms';
+import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +34,13 @@ import { RegisterComponent } from './register/register.component';
     BlogPostComponent,
     BlogPostPageComponent,
     WebsiteComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
