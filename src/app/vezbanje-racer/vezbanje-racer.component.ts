@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./vezbanje-racer.component.css']
 })
 export class VezbanjeRacerComponent {
+  constructor() {
 
+  }
+
+  
+  exampleText = document.getElementById("ExampleText");
+  userText = document.getElementById("UserText");
+
+  public setup() {
+
+  }
 }
