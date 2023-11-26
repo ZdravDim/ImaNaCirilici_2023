@@ -12,4 +12,10 @@ export class HeaderComponent {
     if (localStorage.getItem('accessToken')?.length) this.logInButtonVisible = false;
     else this.logInButtonVisible = true;
   }
+
+  izlogujSe(){
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
+    document.location.reload();
+  }
 }
