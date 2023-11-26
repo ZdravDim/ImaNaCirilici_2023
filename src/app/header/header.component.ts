@@ -8,11 +8,8 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   logInButtonVisible = true;
 
-  ngOnOnit() {
-    if (localStorage.getItem('')) { //pokupi token iz storage
-      if (false) this.logInButtonVisible = false; //pozovi api i vidi jel validan token
-      else this.logInButtonVisible = true;
-    }
+  constructor() {
+    if (localStorage.getItem('accessToken')?.length) this.logInButtonVisible = false;
     else this.logInButtonVisible = true;
   }
 }

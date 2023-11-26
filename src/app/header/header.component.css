@@ -23,15 +23,15 @@ h1 {
     height: 50px !important;
 }
 
-#right-tab {
+#ul .right-tab {
     background-color: #313131 !important;
 }
 
-#right-tab:hover {
+#ul .right-tab:hover {
     background-color: #252525 !important;
 }
 
-#right-tab:active {
+#ul .right-tab:active {
     background-color: #0e0e0e !important;
 }
 

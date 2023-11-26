@@ -10,7 +10,7 @@
     </div>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto">
+      <ul id="ul" class="navbar-nav mx-auto">
         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
           <a class="nav-link" ariaCurrentWhenActive="page" [routerLink]="['/']">Почетна <span class="sr-only">(current)</span></a>
         </li>
@@ -29,8 +29,11 @@
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
             <a class="nav-link" ariaCurrentWhenActive="page" [routerLink]="['/o nama']">О нама</a>
           </li>
-          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-            <a id="right-tab" class="nav-link text-white" ariaCurrentWhenActive="page" [routerLink]="['/login']">Улогуј се</a>
+          <li *ngIf="logInButtonVisible" class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link text-white right-tab" ariaCurrentWhenActive="page" [routerLink]="['/login']">Улогуј се</a>
+          </li>
+          <li *ngIf="!logInButtonVisible" class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link text-white right-tab" ariaCurrentWhenActive="page" [routerLink]="['/']">Излогуј се</a>
           </li>
       </ul>
     </div>
