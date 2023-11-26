@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpServiceService } from '../http-service.service';
 
 @Component({
   selector: 'app-vezbanje-racer',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./vezbanje-racer.component.css']
 })
 export class VezbanjeRacerComponent {
+  constructor(private apiService: HttpServiceService) {}
+
   public characterSet = new Set(["љ", "њ", "е", "р", "т", "з", "у", "и", "о", "п", "ш", "ђ", "а", "с", "д", "ф",
     "г", "х", "ј", "к", "л", "ч", "ћ", "ж", "џ", "ц", "в", "б", "н", "м", "Љ", "Њ", "Е", "Р", "Т", "З", "У", "И", "О", "П", "Ш", "Ђ", "А", "С", "Д", "Ф",
     "Г", "Х", "Ј", "К", "Л", "Ч", "Ћ", "Ж", "Џ", "Ц", "В", "Б", "Н", "М", " ", ".", ",", "!", ";", ":", "q", "w", "e", "r", "t", "y", "u",
@@ -52,6 +55,7 @@ export class VezbanjeRacerComponent {
     }
 
     //POZVATI GET NA /vezba/nasumicni i to staviti u textCir
+    
     let textCir: string = "Ја се зовем Лука";
 
 
