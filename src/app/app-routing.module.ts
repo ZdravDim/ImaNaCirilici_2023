@@ -11,11 +11,14 @@ import { WebsiteComponent } from './website/website.component';
 import { RegisterComponent } from './register/register.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import {ApiDocumentationComponent} from "./api-documentation/api-documentation.component";
+import {TransliteratorOnlineComponent} from "./transliterator-online/transliterator-online.component";
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'api-documentation', component: ApiDocumentationComponent},
+  {path: 'transliterator-online', component: TransliteratorOnlineComponent},
+
   {
     path: '',
     component: WebsiteComponent,

@@ -1,0 +1,73 @@
+.forumPost {
+  width: 600px;
+  height: fit-content;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border: 2px solid #E5E8E8;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.forumPost h1 {
+  all: unset;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-family: arno-pro;
+  font-size: 1.5rem;
+  color: #000401;
+}
+
+.forumPost p {
+  all: unset;
+  display: inline-block;
+  width: 100%;
+  font-family: arno-pro;
+  font-size: 1.25rem;
+  color: #4E545C;
+}
+
+.forumPost h2 {
+  all: unset;
+  font-family: arno-pro;
+  font-size: 1.1rem;
+  color: #8D9797;
+}
+
+.forumPost h3 {
+  all: unset;
+  font-family: arno-pro;
+  font-size: 1.1rem;
+  color: #8D9797;
+}
+
+.forumPost>div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  column-gap: 5px;
+  height: fit-content;
+  width: 100%;
+}
+
+input[type=text]{
+  all: unset;
+  margin: 10px 0 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input[type=text]::placeholder {
+  color: #8D9797;
+}
+
+.comments {
+
+}
+
+@media (max-width: 760px) {
+  .forumPost {
+    width: 80%;
+  }
+}

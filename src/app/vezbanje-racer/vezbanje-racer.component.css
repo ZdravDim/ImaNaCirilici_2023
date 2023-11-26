@@ -1,5 +1,24 @@
 #TextPrompt {
   position: relative;
+  left: -20px;
+  width: 600px;
+  height: auto;
+  min-height: 200px;
+  margin: 50px auto 30px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background: rgb(255,255,255);
+  background: linear-gradient(200deg, rgba(255,255,255,1) 0%, rgba(241,240,237,1) 100%);
+  text-align: left;
+  font-family: calibri;
+  font-size: 1.25rem;
+  color: black;
+  border-radius: 10px;
+  box-shadow: #E5E4E2 -3px 3px 0 5px;
+}
+
+#TextUser {
+  position: relative;
   left: 20px;
   width: 600px;
   height: auto;
@@ -15,25 +34,6 @@
   color: black;
   border-radius: 10px;
   box-shadow: #E5E4E2 3px 3px 0 5px;
-}
-
-#TextUser {
-  position: relative;
-  left: -20px;
-  width: 600px;
-  height: auto;
-  min-height: 200px;
-  margin: 30px auto;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  background: rgb(255,255,255);
-  background: linear-gradient(200deg, rgba(255,255,255,1) 0%, rgba(241,240,237,1) 100%);
-  text-align: left;
-  font-family: calibri;
-  font-size: 1.25rem;
-  color: black;
-  border-radius: 10px;
-  box-shadow: #E5E4E2 -3px 3px 0 5px;
 }
 
 #TimerDisplay {
@@ -53,14 +53,14 @@
 #rstBtn {
   position: relative;
   width: fit-content;
-  margin: 5px auto;
+  margin: 5px auto 20px;
   padding: 6px 16px;
   background-color: #343434;
   color: #f5f5f5;
   font-size: 1.25rem;
   outline: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   transition: 200ms;
 }
 
