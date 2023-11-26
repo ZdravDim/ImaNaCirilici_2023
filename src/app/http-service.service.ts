@@ -19,6 +19,6 @@ export class HttpServiceService {
   }
 
   get(path: string) : Observable<any> {
-    return this.httpClient.get<any>(this.url + String);
+    return this.httpClient.get<any>(this.url + path);
   }
 }

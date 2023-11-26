@@ -50,9 +50,9 @@ export class VezbanjeRacerComponent {
   }
 
   getText() {
-    this.apiService.get('api/vezba/nasumicni').subscribe({
+    this.apiService.get('vezba/nasumicni').subscribe({
       next: (data) => {
-        this.apiText = data;
+        this.apiText = data['tekst'];
         this.pokreni();
       },
       error: (err) => {
