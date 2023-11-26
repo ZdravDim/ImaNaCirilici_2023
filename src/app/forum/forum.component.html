@@ -27,7 +27,7 @@
       </div>
     </form>
    
-    <div id="Comments" class="hidden">
+    <div id="Comments">
       <div *ngFor='let comment of forumData["comments"]' class="comment">
         <div class="commentDate">
           <h2>{{comment['createdBy']}}</h2>
@@ -40,7 +40,6 @@
 
       </div>
     </div>
-    <button id="showComments" (click)="showComments()">Прикажи коментаре</button>
   <!--  <div class="comments"></div>-->
   </div>
 </div>

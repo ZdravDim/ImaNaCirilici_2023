@@ -41,10 +41,9 @@ export class ForumComponent {
   }
 
   sendComment(commentData: any, postId: number) {
-    console.log(commentData)
     this.apiService.post('forum/posts/comment', {postId, content: commentData.text}).subscribe({
       next: (data) => {
-        this.forumArray[postId]['comments'].unshift(data);
+        document.location.reload();
       },
       error: (err) => {
         alert(err.message);
