@@ -15,12 +15,12 @@ export class BlogPostComponent {
       params => {
         let blogId = params['blogId'];
 
-        apiService.get('...' + blogId).subscribe({
+        apiService.get('blog/posts/' + blogId).subscribe({
           next: (data) => {
             this.blogData = data;
           },
           error: (err) => {
-            alert(err);
+            alert(err.message);
           }
         });
       }

@@ -1,11 +1,15 @@
-Blog?
-<a *ngFor='let blogData of blogArray' routerLink="/blog/{blogData['id']}">
-    <div>
-        <h1>{{blogData['title']}}</h1>
-        <p> {{blogData['content']}}</p>
-        <div class="autor">
-        <img src="/assets/1.jpg">
-        <p>{{blogData['createdBy']}}</p>
-        </div>
+<h1 class="text-center my-4">Блог</h1>
+<div class="container-fluid" style="max-width: 1250px;">
+    <div class="row">
+        <a *ngFor='let blogData of blogArray' routerLink="/blog/{blogData['id']}" class="col-xl-6">
+            <div class="div mx-auto">
+                <h1>{{blogData['title']}}</h1>
+                <p> {{blogData['content']}}</p>
+                <div class="autor">
+                <img src="assets/1.jpg">
+                <p>{{blogData['createdBy']['firstName'] + ' ' + blogData['createdBy']['lastName']}}</p>
+                </div>
+            </div>
+        </a>
     </div>
-</a>
+</div>
