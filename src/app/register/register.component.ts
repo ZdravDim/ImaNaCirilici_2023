@@ -30,7 +30,13 @@ export class RegisterComponent {
       document.getElementById("myForm")?.classList.add("was-validated");
     });
   }
-  
+
+  ngOnInit(){
+    if(localStorage.getItem('accessToken') != null){
+      this.router.navigate(['/']);
+    }
+  }
+
   registerFunction(data: any) {
     this.registerData = {
       firstName: data.firstName,
