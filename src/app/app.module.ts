@@ -13,7 +13,6 @@ import { ResursiComponent } from './resursi/resursi.component';
 import { ONamaComponent } from './o-nama/o-nama.component';
 import { LoginComponent } from './login/login.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
-import { BlogPostPageComponent } from './blog-post-page/blog-post-page.component';
 import { WebsiteComponent } from './website/website.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
@@ -36,7 +35,6 @@ import { ApiDocumentationComponent } from './api-documentation/api-documentation
     ONamaComponent,
     LoginComponent,
     BlogPostComponent,
-    BlogPostPageComponent,
     WebsiteComponent,
     RegisterComponent,
     LogoComponent,

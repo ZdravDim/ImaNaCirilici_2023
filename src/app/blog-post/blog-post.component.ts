@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpServiceService } from '../http-service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog-post',
@@ -9,8 +9,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BlogPostComponent {
   blogData: any;
+  formVisible:boolean = false;
 
-  constructor(private apiService: HttpServiceService, private activeRoute: ActivatedRoute) {
+  ngAfterViewInit() {
+    document.getElementById("myForm")?.addEventListener("submit", function(e) {
+      if ((document.getElementById('myForm') as HTMLFormElement).checkValidity() === false) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      document.getElementById("myForm")?.classList.add("was-validated");
+    });
+  }
+
+  constructor(private apiService: HttpServiceService, private activeRoute: ActivatedRoute, private router: Router) {
     this.activeRoute.params.subscribe(
       params => {
         let blogId = params['blogId'];
@@ -25,5 +36,21 @@ export class BlogPostComponent {
         });
       }
     );
+  }
+
+  sendComment(commentData: any) {
+    if (localStorage.getItem('jwtToken')) {
+      this.apiService.post('/..', commentData.comment).subscribe({
+        next: (data) => {
+          //dodaj data tj. odgovor kao komentar novi
+        },
+        error: (err) => {
+          alert(err.message);
+        }
+      });
+    }
+    else {
+      this.router.navigate(['/login']);
+    }
   }
 }
