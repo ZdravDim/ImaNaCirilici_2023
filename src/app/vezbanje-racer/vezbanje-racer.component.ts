@@ -55,7 +55,7 @@ export class VezbanjeRacerComponent {
     }
 
     //POZVATI GET NA /vezba/nasumicni i to staviti u textCir
-    
+
     let textCir: string = "Ја се зовем Лука";
 
 
@@ -85,7 +85,7 @@ export class VezbanjeRacerComponent {
           }, 100);
         }
 
-        if (this.characterSet.has(event.key)) {
+        if (this.characterSet.has(event.key) && i != textLen) {
           if (event.key === textCir.charAt(i) && textUser != null) {
             textUser.innerHTML += event.key;
           } else if (textUser != null) {
