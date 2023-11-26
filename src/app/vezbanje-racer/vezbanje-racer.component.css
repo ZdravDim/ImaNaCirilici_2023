@@ -1,11 +1,15 @@
 #TextPrompt {
   position: relative;
+  left: 20px;
   width: 600px;
   height: auto;
   min-height: 200px;
   margin: 30px auto;
-  background-color: white;
-  text-align: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background: rgb(255,255,255);
+  background: linear-gradient(160deg, rgba(255,255,255,1) 0%, rgba(241,240,237,1) 100%);
+  text-align: left;
   font-family: calibri;
   font-size: 1.25rem;
   color: black;
@@ -15,17 +19,47 @@
 
 #TextUser {
   position: relative;
+  left: -20px;
   width: 600px;
   height: auto;
   min-height: 200px;
   margin: 30px auto;
-  background-color: white;
-  text-align: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background: rgb(255,255,255);
+  background: linear-gradient(200deg, rgba(255,255,255,1) 0%, rgba(241,240,237,1) 100%);
+  text-align: left;
   font-family: calibri;
   font-size: 1.25rem;
   color: black;
   border-radius: 10px;
   box-shadow: #E5E4E2 -3px 3px 0 5px;
+}
+
+#TimerDisplay {
+  position: relative;
+  width: fit-content;
+  margin: 10px auto;
+  font-size: 1.2rem;
+}
+
+#BrojGresaka {
+  position: relative;
+  width: fit-content;
+  margin: 10px auto;
+  font-size: 1.2rem;
+}
+
+#rstBtn {
+  position: relative;
+  width: fit-content;
+  margin: 5px auto;
+  padding: 5px 10px;
+  background-color: #343434;
+  color: white;
+  font-size: 1.25rem;
+  outline: none;
+  border: none;
 }
 
 p>span {

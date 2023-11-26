@@ -94,7 +94,7 @@ export class VezbanjeRacerComponent {
           }, 100);
         }
 
-        if (this.characterSet.has(event.key)) {
+        if (this.characterSet.has(event.key) && i != textLen) {
           if (event.key === this.apiText.charAt(i) && textUser != null) {
             textUser.innerHTML += event.key;
           } else if (textUser != null) {
