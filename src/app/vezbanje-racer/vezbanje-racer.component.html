@@ -1,26 +1,5 @@
-<p>vezbanje-racer works!</p>
-
 <div id="TextPrompt"></div>
 <div id="TextUser"></div>
-
-<button (click)="pokreni()">Belo dugme</button>
-
-<!--<script type="text/javascript">-->
-<!--  alert("Volim da jedem lazanju");-->
-<!--  let text = "Ja se zovem Luka";-->
-<!--  let textPrompt = document.getElementById("TextPrompt");-->
-<!--  let textUser = document.getElementById("TextUser");-->
-<!--  let i = 0;-->
-
-<!--  let characterSet = new Set(["љ", "њ", "е", "р", "т", "з", "у", "и", "о", "п", "ш", "ђ", "а", "с", "д", "ф",-->
-<!--    "г", "х", "ј", "к", "л", "ч", "ћ", "ж", "џ", "ц", "в", "б", "н", "м"])-->
-
-<!--  textPrompt.innerHTML = text;-->
-<!--  textUser.addEventListener("keydown", (event) => {-->
-<!--    if (event.key in characterSet) {-->
-<!--      if (event.key === text[i]) textUser.innerHTML += event.key;-->
-<!--      else textUser.innerHTML += "<span>" + event.key + "</span>";-->
-<!--      i++;-->
-<!--    }-->
-<!--  })-->
-<!--</script>-->
+<div id="TimerDisplay"></div>
+<div id="BrojGresaka"></div>
+<button id="rstBtn" (click)="restartuj()">Restartuj</button>
