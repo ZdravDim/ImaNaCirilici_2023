@@ -1,0 +1,11 @@
+#TextPrompt {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  color: black;
+}
+
+p>span {
+  all: unset;
+  color: red;
+}

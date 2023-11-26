@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./vezbanje.component.css']
 })
 export class VezbanjeComponent {
-
 }
