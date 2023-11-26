@@ -10,10 +10,12 @@ import { LoginComponent } from './login/login.component';
 import { WebsiteComponent } from './website/website.component';
 import { RegisterComponent } from './register/register.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
+import {ApiDocumentationComponent} from "./api-documentation/api-documentation.component";
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'api-documentation', component: ApiDocumentationComponent},
   {
     path: '',
     component: WebsiteComponent,

@@ -84,6 +84,7 @@ export class VezbanjeRacerComponent {
     if (textPrompt != null) textPrompt.innerHTML = text;
     if (textUser != null && timerDisplay != null) {
       document.addEventListener("keydown", (event) => {
+        if (i === textLen) return;
         if (!startTime) {
           startTime = Date.now();
           timerInterval = setInterval(() => {
@@ -94,7 +95,7 @@ export class VezbanjeRacerComponent {
           }, 100);
         }
 
-        if (this.characterSet.has(event.key) && i != textLen) {
+        if (this.characterSet.has(event.key)) {
           if (event.key === this.apiText.charAt(i) && textUser != null) {
             textUser.innerHTML += event.key;
           } else if (textUser != null) {

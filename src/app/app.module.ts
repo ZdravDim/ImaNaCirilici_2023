@@ -20,6 +20,7 @@ import { LogoComponent } from './logo/logo.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HtmlParser } from '@angular/compiler';
 import { VezbanjeRacerComponent } from './vezbanje-racer/vezbanje-racer.component';
+import { ApiDocumentationComponent } from './api-documentation/api-documentation.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { VezbanjeRacerComponent } from './vezbanje-racer/vezbanje-racer.componen
     WebsiteComponent,
     RegisterComponent,
     LogoComponent,
-    VezbanjeRacerComponent
+    VezbanjeRacerComponent,
+    ApiDocumentationComponent
   ],
   imports: [
     BrowserModule,
