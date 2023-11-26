@@ -9,14 +9,14 @@
     <div class="col-sm-6 col-md-5 form-section">
         <div class="login-wrapper">
         <h1 class="login-title text-center">Регистрација</h1>
-        <form  (submit)="registerFunction()">
+        <form *ngIf="!successFlag" #userRegister = "ngForm" (submit)="registerFunction(userRegister.value)">
             <div class="form-group mb-3">
                 <label for="name" class="sr-only">Име</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Име" ngModel>
+                <input type="text" name="firstName" id="name" class="form-control" placeholder="Име" ngModel>
             </div>
             <div class="form-group mb-3">
                 <label for="surname" class="sr-only">Презиме</label>
-                <input type="text" name="surname" id="surname" class="form-control" placeholder="Презиме" ngModel>
+                <input type="text" name="lastName" id="surname" class="form-control" placeholder="Презиме" ngModel>
             </div>
             <div class="form-group">
             <label for="username" class="sr-only">Корисничко име</label>
@@ -27,10 +27,14 @@
             <input type="password" name="password" id="password" class="form-control" placeholder="Шифра" ngModel>
             </div>
             <div class="d-flex justify-content-between align-items-center mb-3">
-            <input name="login" id="login" class="btn login-btn w-100" type="submit" value="Региструј се" ngModel>
+            <input name="login" id="login" class="btn login-btn w-100" type="submit" value="Региструј се">
             </div>
-        </form>           
-        <p class="login-wrapper-footer-text">Имате налог? <a routerLink="/login" class="text-reset">Пријавите се</a></p>
+        </form>
+        <div *ngIf="successFlag">
+            <p class="text-center text-success">Успешна Регистрација!</p>
+            <a routerLink="/login"><button class="btn login-btn w-100">Улогуј се</button></a>
+        </div>
+        <p *ngIf="!successFlag" class="login-wrapper-footer-text">Имате налог? <a routerLink="/login" class="text-reset">Пријавите се</a></p>
         </div>
     </div>
     </div>

@@ -18,6 +18,8 @@ import { WebsiteComponent } from './website/website.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HtmlParser } from '@angular/compiler';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { LogoComponent } from './logo/logo.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
