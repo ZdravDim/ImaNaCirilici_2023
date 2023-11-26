@@ -1,7 +1,7 @@
 div {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 20% 60% 20%;
+  grid-template-rows: 1fr 3fr 52px;
   position: relative;
   height: 300px;
   width: 600px;
@@ -11,7 +11,6 @@ div {
   box-shadow: #E5E4E2 3px 3px 0 5px;
   box-sizing: border-box;
   padding: 20px;
-  object-fit: scale-down;
 }
 
 h1 {
@@ -60,10 +59,16 @@ div.autor {
 @media (max-width: 700px) {
   div {
     width: 85%;
+    height: fit-content;
+    object-fit: contain;
     grid-template-columns: 1fr;
   }
 
   h1 {
+    grid-column: 1 / span 2;
+  }
+
+  div.autor {
     grid-column: 1 / span 2;
   }
 }
