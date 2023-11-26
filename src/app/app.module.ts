@@ -21,6 +21,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HtmlParser } from '@angular/compiler';
 import { VezbanjeRacerComponent } from './vezbanje-racer/vezbanje-racer.component';
 import { ApiDocumentationComponent } from './api-documentation/api-documentation.component';
+import { PrevodilacComponent } from './prevodilac/prevodilac.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ApiDocumentationComponent } from './api-documentation/api-documentation
     RegisterComponent,
     LogoComponent,
     VezbanjeRacerComponent,
-    ApiDocumentationComponent
+    ApiDocumentationComponent,
+    PrevodilacComponent
   ],
   imports: [
     BrowserModule,
