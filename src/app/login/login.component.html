@@ -9,14 +9,14 @@
     <div class="col-sm-6 col-md-5 form-section">
         <div class="login-wrapper">
         <h1 class="login-title text-center">Пријава</h1>
-        <form action="#!">
+        <form #userLogin = "ngForm" (submit)="loginFunction(userLogin.value)">
             <div class="form-group">
             <label for="username" class="sr-only">Корисничко име</label>
-            <input type="username" name="username" id="email" class="form-control" placeholder="Е-маил">
+            <input type="text" name="username" id="username" class="form-control" placeholder="Корисничко име" ngModel>
             </div>
             <div class="form-group mb-3">
             <label for="password" class="sr-only">Шифра</label>
-            <input type="password" name="password" id="password" class="form-control" placeholder="Шифра">
+            <input type="password" name="password" id="password" class="form-control" placeholder="Шифра" ngModel>
             </div>
             <div class="d-flex justify-content-between align-items-center mb-3">
             <input name="login" id="login" class="btn login-btn w-100" type="button" value="Пријавите се">

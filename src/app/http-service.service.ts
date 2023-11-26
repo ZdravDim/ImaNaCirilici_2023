@@ -11,6 +11,10 @@ export class HttpServiceService {
   constructor(private httpClient: HttpClient) { }
 
   registerRequest(data: RegisterRequest) : Observable<RegisterResponse> {
-    return this.httpClient.post<RegisterResponse>(this.url + "auth/register", data);
+    return this.httpClient.post<RegisterResponse>(this.url + 'auth/register', data);
+  }
+
+  loginRequest(data: LoginRequest) : Observable<LoginResponse> {
+    return this.httpClient.post<LoginResponse>(this.url + 'auth/login', data);
   }
 }
