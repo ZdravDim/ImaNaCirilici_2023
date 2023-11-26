@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./forum-new-post.component.css']
 })
 export class ForumNewPostComponent {
+  postTitle: HTMLTextAreaElement | null = null;
+  postContent: HTMLTextAreaElement | null = null;
+  obrisiBtn: HTMLElement | null = null;
+  postujBtn: HTMLElement | null = null;
 
+  obrisi() {
+    this.postTitle = document.getElementById("PostTitle");
+    this.postContent = document.getElementById("PostContent");
+
+    if (this.postTitle) this.postTitle.value = "";
+    if (this.postContent) this.postContent.value = "";
+  }
 }
