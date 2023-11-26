@@ -31,7 +31,8 @@ export class RegisterComponent {
 
     this.apiService.registerRequest(this.registerData).subscribe({
       error: (err) => {
-        alert(err.message);
+        if (err.code == 409) alert('Корисник је већ регистрован.');
+        else alert('Регистрација није услепа.');
       },
       complete: () => {
         this.successFlag = true;
