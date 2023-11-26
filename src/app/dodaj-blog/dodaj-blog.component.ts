@@ -22,7 +22,13 @@ export class DodajBlogComponent {
   }
 
   createBlog(data: any) {
-    this.apiService.post('blog/posts', data).subscribe({
+    let formData = new FormData();
+    console.log(data)
+    formData.append('image', data.image);
+    formData.append('title', data.title);
+    formData.append('content', data.textarea);
+
+    this.apiService.newBlog('blog/posts', formData).subscribe({
       next: (data) => {
         this.sucessfulResponse = true;
       }

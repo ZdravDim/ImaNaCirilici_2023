@@ -1,6 +1,17 @@
-<h1 class="text-center my-4">Добро дошли на наш Ћирилични форум!</h1>
-
 <div class="container-fluid" style="max-width: 1250px;">
+  <h1 class="text-center my-4">Добро дошли на наш Ћирилични форум!</h1>
+
+  <div class="forumPost mb-4">
+    <form id="myForm" #userComment = "ngForm" (submit)="addPost(userComment.value)" class="needs-validation mx-auto p-3" novalidate>
+      <textarea id="PostTitle" name="title" placeholder="Наслов..." rows="1" cols="40" ngModel required></textarea>
+      <textarea id="PostContent" name="content" placeholder="Текст..." rows="4" cols="40" ngModel required></textarea>
+      <div>
+        <button id="ObrisiBtn" (click)="obrisi()">Обриши</button>
+        <button id="PostujBtn">Постуј</button>
+      </div>
+    </form>
+  </div>
+
   <div *ngFor='let forumData of forumArray' class="forumPost">
     <h1>{{forumData['title']}}</h1>
     <p>{{forumData['content']}}</p>
@@ -31,5 +42,3 @@
   <!--  <div class="comments"></div>-->
   </div>
 </div>
-
-<app-forum-new-post></app-forum-new-post>

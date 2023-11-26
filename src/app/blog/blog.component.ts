@@ -11,7 +11,7 @@ export class BlogComponent {
   userIsAdmin: boolean = false;
 
   constructor(private apiService: HttpServiceService) {
-    this.userIsAdmin = localStorage.getItem('isAdmin') === 'true';
+    this.userIsAdmin = localStorage.getItem('admin') === 'true';
 
     apiService.get('blog/posts').subscribe({
       next: (data) => {

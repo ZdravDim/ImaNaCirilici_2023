@@ -34,4 +34,13 @@ export class HttpServiceService {
       }
     });
   }
+
+  newBlog(path: string, data: any) : Observable<any> {
+    return this.httpClient.post<any>(this.url + path, data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        "Authorization": "Bearer " + localStorage.getItem('accessToken')
+      }
+    });
+  }
 }

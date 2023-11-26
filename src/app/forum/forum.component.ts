@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpServiceService } from '../http-service.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-forum',
@@ -7,8 +8,12 @@ import { HttpServiceService } from '../http-service.service';
   styleUrls: ['./forum.component.css']
 })
 export class ForumComponent {
+  postTitle: HTMLTextAreaElement | null = null;
+  postContent: HTMLTextAreaElement | null = null;
+  obrisiBtn: HTMLElement | null = null;
+  postujBtn: HTMLElement | null = null;
   forumArray: any;
-  constructor(private apiService: HttpServiceService) {
+  constructor(private apiService: HttpServiceService, private activeRoute: ActivatedRoute, private router: Router) {
     apiService.get('forum/posts').subscribe({
       next: (data) => {
         this.forumArray = data['content'];
@@ -44,5 +49,31 @@ export class ForumComponent {
         alert(err.message);
       }
     });
+  }
+
+  obrisi() {
+    this.postTitle = document.getElementById("PostTitle") as HTMLTextAreaElement;
+    this.postContent = document.getElementById("PostContent") as HTMLTextAreaElement;
+
+    if (this.postTitle) this.postTitle.value = "";
+    if (this.postContent) this.postContent.value = "";
+  }
+  addPost(postData: any) {
+    if (localStorage.getItem('accessToken')) {
+      this.apiService.post('forum/posts', {
+        title: postData.title,
+        content: postData.content
+      }).subscribe({
+        next: (data) => {
+          document.location.reload();
+        },
+        error: (err) => {
+          alert(err.message);
+        }
+      });
+    }
+    else {
+      this.router.navigate(['/login']);
+    }
   }
 }

@@ -15,6 +15,7 @@ import {TransliteratorOnlineComponent} from "./transliterator-online/translitera
 import { DodajBlogComponent } from './dodaj-blog/dodaj-blog.component';
 import { adminGuardGuard } from './admin-guard.guard';
 
+
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
