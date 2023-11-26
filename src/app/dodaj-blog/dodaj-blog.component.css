@@ -1,0 +1,33 @@
+form {
+    width: 500px;
+}
+
+input {
+    height: 50px;
+}
+
+input[type="file"] {
+    line-height: 38px;
+}
+
+input[type="submit"] {
+    background-color: #313131 !important;
+    color: white !important;
+    border-radius: 0px;
+}
+
+input[type="submit"]:hover {
+    background-color: #252525 !important;
+}
+
+input[type="submit"]:active {
+    background-color: #0e0e0e !important;
+}
+
+textarea, input {
+    border-radius: 0px;
+}
+
+textarea {
+    min-height: 70px;
+}

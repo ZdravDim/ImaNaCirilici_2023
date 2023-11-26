@@ -2,6 +2,10 @@ input[type=text] {
     height: 100px;
 }
 
+select {
+    border:0px !important;
+}
+
 input {
     max-width: 400px;
 }
@@ -10,17 +14,17 @@ input {
     width: 118px;
 }
 
-button, select {
+input[type="submit"], select {
     background-color: #313131 !important;
     color: white !important;
     border-radius: 0px;
 }
 
-button:hover {
+input[type="submit"]:hover {
     background-color: #252525 !important;
 }
 
-button:active {
+input[type="submit"]:active {
     background-color: #0e0e0e !important;
 }
 
