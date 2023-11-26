@@ -1,41 +1,49 @@
 <div class="container-fluid">
     <div class="row">
-    <div class="col-sm-6 col-md-7 intro-section">
-        <div class="intro-content-wrapper">
-        <h1 class="intro-title">Добродошли на наш сајт !</h1>
-        <p class="intro-text">Молимо вас да се улогујете / региструјете уколико немате налог.</p>
+        <div class="col-sm-6 col-md-7 intro-section">
+            <div class="intro-content-wrapper">
+            <h1 class="intro-title">Добродошли на наш сајт !</h1>
+            <p class="intro-text">Молимо вас да се улогујете / региструјете уколико немате налог.</p>
+            </div>
         </div>
-    </div>
-    <div class="col-sm-6 col-md-5 form-section">
-        <div class="login-wrapper">
-        <h1 class="login-title text-center">Регистрација</h1>
-        <form *ngIf="!successFlag" #userRegister = "ngForm" (submit)="registerFunction(userRegister.value)">
-            <div class="form-group mb-3">
-                <label for="name" class="sr-only">Име</label>
-                <input type="text" name="firstName" id="name" class="form-control" placeholder="Име" ngModel>
+        <div class="col-sm-6 col-md-5 d-flex flex-column">
+            <a routerLink="/" class="ml-auto d-flex d-flex align-middle mt-4 mr-4 mb-2" style="text-decoration: none; color: black;">
+                <app-logo class="ml-auto mr-3 d-flex align-middle custom-size"></app-logo>
+                <h1 class="navbar-brand mb-0 my-auto">Има на ћирилици</h1>
+            </a>
+            <div class="my-auto" style="padding-bottom: 100px;">
+                <div class="form-section">
+                    <div class="login-wrapper">
+                        <h1 class="login-title text-center">Регистрација</h1>
+                        <form *ngIf="!successFlag" #userRegister = "ngForm" (submit)="registerFunction(userRegister.value)">
+                            <div class="form-group mb-3">
+                                <label for="name" class="sr-only">Име</label>
+                                <input type="text" name="firstName" id="name" class="form-control" placeholder="Име" ngModel>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="surname" class="sr-only">Презиме</label>
+                                <input type="text" name="lastName" id="surname" class="form-control" placeholder="Презиме" ngModel>
+                            </div>
+                            <div class="form-group">
+                                <label for="username" class="sr-only">Корисничко име</label>
+                                <input type="text" name="username" id="username" class="form-control" placeholder="Корисничко име" ngModel>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="password" class="sr-only">Шифра</label>
+                                <input type="password" name="password" id="password" class="form-control" placeholder="Шифра" ngModel>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                            <input name="login" id="login" class="btn login-btn w-100" type="submit" value="Региструј се">
+                            </div>
+                        </form>
+                        <div *ngIf="successFlag">
+                            <p class="text-center text-success">Успешна Регистрација!</p>
+                            <a routerLink="/login"><button class="btn login-btn w-100">Улогуј се</button></a>
+                        </div>
+                        <p *ngIf="!successFlag" class="login-wrapper-footer-text">Имате налог? <a routerLink="/login" class="text-reset">Пријавите се</a></p>
+                    </div>
+                </div>
             </div>
-            <div class="form-group mb-3">
-                <label for="surname" class="sr-only">Презиме</label>
-                <input type="text" name="lastName" id="surname" class="form-control" placeholder="Презиме" ngModel>
-            </div>
-            <div class="form-group">
-            <label for="username" class="sr-only">Корисничко име</label>
-            <input type="text" name="username" id="username" class="form-control" placeholder="Корисничко име" ngModel>
-            </div>
-            <div class="form-group mb-3">
-            <label for="password" class="sr-only">Шифра</label>
-            <input type="password" name="password" id="password" class="form-control" placeholder="Шифра" ngModel>
-            </div>
-            <div class="d-flex justify-content-between align-items-center mb-3">
-            <input name="login" id="login" class="btn login-btn w-100" type="submit" value="Региструј се">
-            </div>
-        </form>
-        <div *ngIf="successFlag">
-            <p class="text-center text-success">Успешна Регистрација!</p>
-            <a routerLink="/login"><button class="btn login-btn w-100">Улогуј се</button></a>
         </div>
-        <p *ngIf="!successFlag" class="login-wrapper-footer-text">Имате налог? <a routerLink="/login" class="text-reset">Пријавите се</a></p>
-        </div>
-    </div>
     </div>
 </div>
