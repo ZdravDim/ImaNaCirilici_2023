@@ -22,6 +22,7 @@ import { HtmlParser } from '@angular/compiler';
 import { VezbanjeRacerComponent } from './vezbanje-racer/vezbanje-racer.component';
 import { ApiDocumentationComponent } from './api-documentation/api-documentation.component';
 import { PrevodilacComponent } from './prevodilac/prevodilac.component';
+import { TransliteratorOnlineComponent } from './transliterator-online/transliterator-online.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PrevodilacComponent } from './prevodilac/prevodilac.component';
     LogoComponent,
     VezbanjeRacerComponent,
     ApiDocumentationComponent,
-    PrevodilacComponent
+    PrevodilacComponent,
+    TransliteratorOnlineComponent
   ],
   imports: [
     BrowserModule,
