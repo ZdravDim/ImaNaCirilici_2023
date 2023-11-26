@@ -13,9 +13,32 @@ export class VezbanjeRacerComponent {
     "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M", "0", "1", "2", "3", "4", "5", "6",
     "7", "8", "9"]);
 
-  public characterMap = new Map(); //TODO Finish map
+  public characterMap = new Map([
+    ['љ', 'lj'], ['њ', 'nj'], ['е', 'e'], ['р', 'r'], ['т', 't'], ['з', 'z'], ['у', 'u'], ['и', 'i'], ['о', 'o'],
+    ['п', 'p'], ['ш', 'sh'], ['ђ', 'dj'], ['а', 'a'], ['с', 's'], ['д', 'd'], ['ф', 'f'],
+    ['г', 'g'], ['х', 'h'], ['ј', 'j'], ['к', 'k'], ['л', 'l'], ['ч', 'ch'], ['ћ', 'c'], ['ж', 'ž'], ['џ', 'dž'],
+    ['ц', 'c'], ['в', 'v'], ['б', 'b'], ['н', 'n'], ['м', 'm'], ['Љ', 'Lj'], ['Њ', 'Nj'], ['Е', 'E'], ['Р', 'R'],
+    ['Т', 'T'], ['З', 'Z'], ['У', 'U'], ['И', 'I'], ['О', 'O'], ['П', 'P'], ['Ш', 'Sh'], ['Ђ', 'Dj'], ['А', 'A'],
+    ['С', 'S'], ['Д', 'D'], ['Ф', 'F'], ['Г', 'G'], ['Х', 'H'], ['Ј', 'J'], ['К', 'K'], ['Л', 'L'], ['Ч', 'Ch'],
+    ['Ћ', 'C'], ['Ж', 'Ž'], ['Џ', 'Dž'], ['Ц', 'C'], ['В', 'V'], ['Б', 'B'], ['Н', 'N'], ['М', 'M'], [' ', ' ']
+  ]);
 
-  konvertuj_u_latinicu() {} //TODO Finish converter
+  konvertuj_u_latinicu(cirilicniTekst: string): string {
+    let latinicniTekst = '';
+
+    for (let i = 0; i < cirilicniTekst.length; i++) {
+      const karakter = cirilicniTekst.charAt(i);
+      const konvertovaniKarakter = this.characterMap.get(karakter);
+
+      if (konvertovaniKarakter) {
+        latinicniTekst += konvertovaniKarakter;
+      } else {
+        latinicniTekst += karakter;
+      }
+    }
+
+    return latinicniTekst;
+  }
 
   ngOnInit() {
     this.pokreni();
@@ -27,8 +50,15 @@ export class VezbanjeRacerComponent {
     if (resetButton) {
       resetButton.style.visibility = "hidden";
     }
-    let text: string = "Ја се зовем Лука";
-    let textLen: number = text.length;
+
+    //POZVATI GET NA /vezba/nasumicni i to staviti u textCir
+    let textCir: string = "Ја се зовем Лука";
+
+
+    let textLen: number = textCir.length;
+
+    const text = this.konvertuj_u_latinicu(textCir);
+
     let textPrompt: HTMLElement | null = document.getElementById("TextPrompt");
     let textUser: HTMLElement | null = document.getElementById("TextUser");
     let timerDisplay: HTMLElement | null = document.getElementById("TimerDisplay");
@@ -52,7 +82,7 @@ export class VezbanjeRacerComponent {
         }
 
         if (this.characterSet.has(event.key)) {
-          if (event.key === text.charAt(i) && textUser != null) {
+          if (event.key === textCir.charAt(i) && textUser != null) {
             textUser.innerHTML += event.key;
           } else if (textUser != null) {
             textUser.innerHTML += "<span style='color:red'>" + event.key + "</span>";
@@ -61,9 +91,9 @@ export class VezbanjeRacerComponent {
 
           if (++i === textLen) {
             clearInterval(timerInterval);
-            // prekini kad se iskuca textLen karaktera
             if(brojGresaka != null){
-              brojGresaka.innerHTML += 'Imate:' + numberOfErrors + ' gresaka od ' + i + ' karaktera.';
+              const procenat = numberOfErrors / textLen * 100;
+              brojGresaka.innerHTML += `Imate: ${numberOfErrors} grešaka od ${textLen} karaktera. (${procenat.toFixed(2)}%)`;
             }
 
             if (resetButton) {
