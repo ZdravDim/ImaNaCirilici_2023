@@ -21,6 +21,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { VezbanjeRacerComponent } from './vezbanje-racer/vezbanje-racer.component';
 import { ApiDocumentationComponent } from './api-documentation/api-documentation.component';
 import { TransliteratorOnlineComponent } from './transliterator-online/transliterator-online.component';
+import { ForumNewPostComponent } from './forum-new-post/forum-new-post.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { TransliteratorOnlineComponent } from './transliterator-online/translite
     LogoComponent,
     VezbanjeRacerComponent,
     ApiDocumentationComponent,
-    TransliteratorOnlineComponent
+    TransliteratorOnlineComponent,
+    ForumNewPostComponent
   ],
   imports: [
     BrowserModule,

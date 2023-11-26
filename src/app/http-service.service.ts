@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LoginRequest, LoginResponse, RegisterRequest, RegisterResponse } from './models';
 import { Observable } from 'rxjs';
-import { HtmlParser } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
