@@ -10,9 +10,12 @@ export class BlogComponent {
   blogArray: any;
 
   constructor(private apiService: HttpServiceService) {
-    apiService.get('/blog/posts').subscribe({
+    apiService.get('blog/posts').subscribe({
       next: (data) => {
-        this.blogArray = data;
+        this.blogArray = data['content'];
+      },
+      error: (err) => {
+        alert(err.message);
       }
     });
   }
