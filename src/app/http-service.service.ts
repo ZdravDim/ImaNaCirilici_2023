@@ -30,7 +30,8 @@ export class HttpServiceService {
   post(path: string, data: any) : Observable<any> {
     return this.httpClient.post<any>(this.url + path, data, {
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + localStorage.getItem('accessToken')
       }
     });
   }

@@ -20,7 +20,6 @@ import { LogoComponent } from './logo/logo.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { VezbanjeRacerComponent } from './vezbanje-racer/vezbanje-racer.component';
 import { ApiDocumentationComponent } from './api-documentation/api-documentation.component';
-import { PrevodilacComponent } from './prevodilac/prevodilac.component';
 import { TransliteratorOnlineComponent } from './transliterator-online/transliterator-online.component';
 
 @NgModule({
@@ -41,7 +40,6 @@ import { TransliteratorOnlineComponent } from './transliterator-online/translite
     LogoComponent,
     VezbanjeRacerComponent,
     ApiDocumentationComponent,
-    PrevodilacComponent,
     TransliteratorOnlineComponent
   ],
   imports: [
