@@ -13,10 +13,10 @@ export class BlogPostComponent {
 
   ngAfterViewInit() {
     document.getElementById("myForm")?.addEventListener("submit", function(e) {
-      if ((document.getElementById('myForm') as HTMLFormElement).checkValidity() === false) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
+      // if ((document.getElementById('myForm') as HTMLFormElement).checkValidity() === false) {
+      //   e.preventDefault();
+      //   e.stopPropagation();
+      // }
       document.getElementById("myForm")?.classList.add("was-validated");
     });
   }
@@ -39,10 +39,13 @@ export class BlogPostComponent {
   }
 
   sendComment(commentData: any) {
-    if (localStorage.getItem('jwtToken')) {
-      this.apiService.post('/..', commentData.comment).subscribe({
+    if (localStorage.getItem('accessToken')) {
+      this.apiService.post('blog/posts/comment', {
+        postId: this.blogData['id'], 
+        content: commentData.comment
+      }).subscribe({
         next: (data) => {
-          //dodaj data tj. odgovor kao komentar novi
+          this.blogData['comments'].push(data);
         },
         error: (err) => {
           alert(err.message);

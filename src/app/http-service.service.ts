@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LoginRequest, LoginResponse, RegisterRequest, RegisterResponse } from './models';
 import { Observable } from 'rxjs';
-import { HtmlParser } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +29,8 @@ export class HttpServiceService {
   post(path: string, data: any) : Observable<any> {
     return this.httpClient.post<any>(this.url + path, data, {
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + localStorage.getItem('accessToken')
       }
     });
   }
