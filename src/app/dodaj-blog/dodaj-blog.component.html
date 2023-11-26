@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <form id="myForm" class="mx-auto mt-4" #blogForm = "ngForm" (submit)="createBlog(blogForm.value)">
+            <h1 class="mb-4 text-center">Креирај блог</h1>
+
+            <div class="form-group">
+                <label for="title" class="sr-only">Наслов</label>
+                <input type="text" name="title" id="username" class="form-control" placeholder="Наслов" ngModel required>
+            </div>
+
+            <div class="form-group">
+                <label for="username" class="sr-only">Садржај</label>
+                <textarea rows="2" name="textarea" id="textarea" class="form-control" placeholder="Садржај" ngModel required></textarea>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="image" class="sr-only">Слика</label>
+                <input type="file" name="image" id="image" class="form-control" placeholder="Слика" ngModel required>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <input name="login" id="login" class="btn login-btn w-100" type="submit" value="Пријавите се">
+            </div>
+
+            <p class="text-success text-center" *ngIf="sucessfulResponse">Успешно креиран блог садршај!</p>
+        </form>
+    </div>
+</div>

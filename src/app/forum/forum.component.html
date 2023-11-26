@@ -1,21 +1,35 @@
 <h1 class="text-center my-4">Добро дошли на наш Ћирилични форум!</h1>
 
-<div class="forumPost">
-  <h1>Ово је мој први пост</h1>
-  <p>Надам се да неће бити и последњи.</p>
-  <div>
-    <h2>Лука Рапаић</h2>
-    <h2>:</h2>
-    <h3>26.11.23. 18:17</h3>
+<div class="container-fluid" style="max-width: 1250px;">
+  <div *ngFor='let forumData of forumArray' class="forumPost">
+    <h1>{{forumData['title']}}</h1>
+    <p>{{forumData['content']}}</p>
+    <div>
+      <h2>{{forumData['createdBy']}}</h2>
+      <h2>:</h2>
+      <h3>{{forumData['createdAt']}}</h3>
+    </div>
+    <form id="myForm" #userComment = "ngForm" (submit)="sendComment(userComment.value, forumData['id'])" class="needs-validation mx-auto p-3" novalidate> 
+      <div class="sendComment">
+        <input type="text" name="text" placeholder="Остави коментар..." ngModel required>
+        <button><img src="assets/Send.png"></button>
+      </div>
+    </form>
+   
+    <div id="Comments" class="hidden">
+      <div *ngFor='let comment of forumData["comments"]' class="comment">
+        <div class="commentContent">
+          <h2>{{comment['createdBy']}}</h2>
+          <p>{{comment['content']}}</p>
+        </div>
+        <div class="commentDate">
+          <h3>{{comment['createdAt']}}</h3>
+        </div>
+      </div>
+    </div>
+    <button id="showComments" (click)="showComments()">Прикажи коментаре</button>
+  <!--  <div class="comments"></div>-->
   </div>
-  <div class="sendComment">
-    <input type="text" placeholder="Остави коментар...">
-    <button><img src="assets/Send.png"></button>
-  </div>
-  <div id="Comments" class="hidden">
-  </div>
-  <button id="showComments" (click)="showComments()">Прикажи коментаре</button>
-<!--  <div class="comments"></div>-->
 </div>
 
 <app-forum-new-post></app-forum-new-post>
