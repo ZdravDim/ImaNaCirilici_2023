@@ -4,10 +4,10 @@ body {
   background: linear-gradient(to bottom, #f0f0f0, #ffffff);
 }
 
-.container {
-  max-width: 50%;
+.container-fluid {
+  max-width: min(90%, 800px);
   margin: 2% auto;
-  padding: 100px;
+  padding: 20px;
   text-align: justify;
   color: #333;
   border-radius: 10px;
