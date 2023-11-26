@@ -87,6 +87,7 @@
 
 .sendComment>button:hover {
   background-color: #D5D8D8;
+  cursor: pointer;
   transition: 200ms;
 }
 
@@ -114,7 +115,17 @@
 
 #showComments:hover {
   background-color: #2E343C;
+  cursor: pointer;
   transition: 200ms;
+}
+
+#Comments {
+  width: 100%;
+  height: 300px;
+}
+
+#Comments.hidden {
+  display: none;
 }
 
 @media (max-width: 760px) {

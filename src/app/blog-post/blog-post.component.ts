@@ -13,10 +13,10 @@ export class BlogPostComponent {
 
   ngAfterViewInit() {
     document.getElementById("myForm")?.addEventListener("submit", function(e) {
-      // if ((document.getElementById('myForm') as HTMLFormElement).checkValidity() === false) {
-      //   e.preventDefault();
-      //   e.stopPropagation();
-      // }
+      if ((document.getElementById('myForm') as HTMLFormElement).checkValidity() === false) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
       document.getElementById("myForm")?.classList.add("was-validated");
     });
   }
@@ -45,7 +45,7 @@ export class BlogPostComponent {
         content: commentData.comment
       }).subscribe({
         next: (data) => {
-          this.blogData['comments'].push(data);
+          this.blogData['comments'].unshift(data);
         },
         error: (err) => {
           alert(err.message);
