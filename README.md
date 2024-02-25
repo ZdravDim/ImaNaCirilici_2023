@@ -1,27 +1,19 @@
-# ImaNaCiriliciFront
+# Ima Na Cirilici 2023 - Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+![image](https://github.com/ZdravDim/ImaNaCirilici_2023/assets/72796409/3e5c95c5-1128-46d7-973f-0ed08a2f1198)
 
-## Development server
+![image](https://github.com/ZdravDim/ImaNaCirilici_2023/assets/72796409/a30f444c-cc07-4692-9eb0-950b06363b9f)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Short description
 
-## Code scaffolding
+Ima Na Cirilici 2023 is a web development Hackathon, this is our frontend solution
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Specification
 
-## Build
+- Angular + Bootstrap
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instalation
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Frist run `git clone https://github.com/ZdravDim/ImaNaCirilici_2023.git`
+- Then `npm install` to resolve dependencies
+- THen `ng serve` to start up the development build
